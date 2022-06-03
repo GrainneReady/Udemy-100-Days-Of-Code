@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"njpwerner.autodocstring",
+			"ms-python.python",
+			"KevinRose.vsc-python-indent"
+		]
+
+	},
+	"settings": {}
+}
