@@ -38,4 +38,7 @@ for number in range(0, nr_numbers):
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 # This will then randomize the order of the password that was previously generated
 random.shuffle(password)
-print(f"Here is your password: {password}")
+passwordAsString = ""
+for character in password:
+    passwordAsString += character
+print(f"Here is your password: {passwordAsString}")
