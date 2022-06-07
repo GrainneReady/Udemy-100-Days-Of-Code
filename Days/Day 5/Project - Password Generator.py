@@ -33,10 +33,9 @@ for symbol in range(0, nr_symbols):
 for number in range(0, nr_numbers):
     generatedCharacter = numbers[random.randint(0, len(numbers) - 1)]
     password.append(generatedCharacter)
-print(password)
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 # This will then randomize the order of the password that was previously generated
 random.shuffle(password)
-print(password)
+print(f"Here is your password: {password}")
