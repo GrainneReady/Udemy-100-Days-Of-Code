@@ -1,4 +1,4 @@
-# This program is a direct copy of a program I made following Udemy's Day 13 of 100 Days of Code
+# This program is a direct copy of a program I made following Udemy's Day 14 of 100 Days of Code
 #   The Complete Python Pro Bootcamp for 2022
 #   https://www.udemy.com/course/100-days-of-code/
 # Preview Links:
@@ -26,17 +26,17 @@ def account_picker():
     If there is only one dictionary in the list, the function will return a list with -1 at index 0
 
     Returns:
-        list(Dictionary): a list containing the dictionaries of the two randomly chosen accounts, 
+        list(Dictionary): a list containing the dictionaries of the two randomly chosen accounts,
         or -1 if the list only contained 1 Account.
     """
     accounts_picked = False
     chosen_accounts = [random.choice(list(data))]
     while not accounts_picked:
         account_to_add = random.choice(list(data))
-        if account_to_add not in chosen_accounts: # Will make sure we don't choose the same Account
+        if account_to_add not in chosen_accounts:  # Will make sure we don't choose the same Account
             chosen_accounts.append(account_to_add)
             accounts_picked = True
-        elif len(data) == 1:# Error Handling
+        elif len(data) == 1:  # Error Handling
             chosen_accounts[0] = -1
             accounts_picked = True
     return chosen_accounts
@@ -72,6 +72,8 @@ def compare_follower_count(accounts):
     if account_a["follower_count"] > account_b["follower_count"]:
         return 'A'
     return 'B'
+
+
 def higher_or_lower():
     """Plays games of HigherOrLower with the user until they eventually lose.
     The game is played by choosing two accounts at random from a list of dictionaries which are of
@@ -84,8 +86,9 @@ def higher_or_lower():
     choice = 'A'
     correct_choice = 'A'
     score = 0
+    Lost = False
     first_time_in_loop = True
-    while not quit:
+    while not Lost:
         print(logo)
         if first_time_in_loop:
             first_time_in_loop = False
@@ -105,5 +108,7 @@ def higher_or_lower():
             print(f"Against B: {account_formatter(second_account)}.")
             choice = input("Who has more followers? Type 'A' or 'B': ").upper()
             os.system('cls')
-            correct_choice = compare_follower_count(accounts=accounts_to_compare)          
+            correct_choice = compare_follower_count(accounts=accounts_to_compare)
+
+
 higher_or_lower()
