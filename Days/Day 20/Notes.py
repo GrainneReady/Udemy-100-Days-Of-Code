@@ -1,5 +1,5 @@
 # +-------------------------------+
-# |          Section 19           |
+# |          Section 20           |
 # +-------------------------------+
 # |    Building the Snake Game    |
 # |    Animation & Coordinates    |
