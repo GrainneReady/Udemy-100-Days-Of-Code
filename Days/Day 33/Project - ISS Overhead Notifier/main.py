@@ -32,8 +32,6 @@ sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
 sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
 time_now = datetime.now()
-print(iss_latitude)
-print(iss_longitude)
 
 # If the ISS is close to my current position
 # and it is currently dark
